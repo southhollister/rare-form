@@ -1,13 +1,150 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  margin: 0;
+  /* background-color: #3f3f3f; */
+}
+
+button {
+  cursor: pointer;
+}
+
+form {
+  padding: 1em 2em;
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.form-modal {
+  margin-top: 10em!important;
+}
+
+.form-control {
+  margin-bottom: 1em;
+}
+
+.form-control label{
+  margin-right: 1em;
+}
+
+.form-control .validation {
+  color: red;
+  font-size: .75em;
+}
+
+.form-control.invalid input{
+  border-color: red;
+  background-color: rgb(248, 203, 198);
+}
+
+.form-control input {
+  height: 2em;
+  padding: .5em;
+  width: 100%;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.form-actions button {
+  font-size: 1.2em;
+}
+
+.fadeIn {
+  animation: fadeIn ease 0.5s;
+}
+
+.fadeOut {
+  animation: fadeOut ease 1s forwards;
+}
+
+/* Hides spinner on number inputs */
+.no-spin::-webkit-inner-spin-button,
+.no-spin::-webkit-outer-spin-button,
+.no-spin > input::-webkit-inner-spin-button,
+.no-spin > input::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.no-spin,
+.no-spin > input {
+  -moz-appearance: textfield !important;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.bump {
+  animation: bump .5s ease-out;
+}
+
+
+@keyframes bump {
+  from {
+      transform: scale(1);
+  }
+
+  20% {
+      transform: scale(.8);
+  }
+
+  30% {
+      transform: scale(1.2);
+  }
+  
+  50% {
+      transform: scale(1.3);
+  }
+  
+  to {
+      transform: scale(1);
+  }
+}
+
+.slide-from-right {
+  animation: slide-from-right .2s ease-out forwards;
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  90% {
+    transform: translateX(-10%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
 }
