@@ -44,7 +44,7 @@ const useInput = (validateValue) => {
   // tracking its' focus
   return {
     value: enteredValue,
-    isVaild: valueIsValid,
+    isValid: valueIsValid,
     hasError,  // same as hasError: hasError because it has the same name
     valueChangeHandler,
     blurHandler,
